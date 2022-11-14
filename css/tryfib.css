@@ -1,0 +1,81 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.b-1,
+.lab-1 {
+    background: rgb(181, 65, 65);
+    cursor: pointer;
+}
+
+.b-2,
+.lab-2 {
+    background: rgb(44, 189, 112);
+    cursor: pointer;
+}
+
+.labs {
+    display: flex;
+    flex-direction: row;
+}
+
+.lab-1,
+.lab-2 {
+    text-align: center;
+    color: aliceblue;
+    border-radius: 3px;
+}
+
+.b-1,
+.b-2 {
+    color: aliceblue;
+    border-radius: 3px;
+}
+
+.b-1:hover,
+.b-2:hover,
+.lab-1:hover,
+.lab-2:hover,
+.anim2323:hover {
+    color: goldenrod;
+}
+.riri{
+    margin-left: 5px;
+}
+.bl {
+    background: blue;
+    width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white
+}
+.bl1{
+    justify-content: left;
+}
+.bl:hover {
+    color: goldenrod;
+    background-color: rgb(50, 50, 194);
+}
+
+.mr {
+    width: 10px;
+    height: 45px;
+    background: linear-gradient(0deg, rgb(59, 170, 83) 48%, rgb(182, 242, 4) 88%, rgba(209, 253, 45, 1) 100%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    border-radius: 15px;
+}
+
+.anim2323 {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/tryfib.css">
+    <title>Progress bar</title>
+</head>
+
+<body>
+
+    <h2>Modern progress bar</h2>
+
+    <p>Please take a look how it works!</p>
+
+    <p id="demo1"></p>
+    <div class="bl">
+        <div class="mr"> </div>
+    </div>
+    <h2>Closures and Fibonacci sequence number's</h2>
+
+    <p>Play around with the code and click on the "Run" button to view the result.</p>
+
+    <p id="demo"></p>
+    <div class="labs">
+        <div>
+            <button class="b-1" id="but-1">Button B-1</button>
+            <div class="lab-1">1</div>
+        </div>
+        <div class="riri">
+            <button class="b-2" id="but-2">Button B-2</button>
+            <div class="lab-2">1</div>
+        </div>
+    </div>
+    <div>
+        <h2 class="anim222">Circles animation</h2>
+        <div class="animghgh"><a href="./anim.html" class="anim2323" target="_blank">Let's have a look at the animation on next page</a></div>
+    </div>
+
+    <script>
+        let lll1 = 0;
+        let lll2
+        flip = true;
+        elem = document.getElementById("demo1");
+        mmm = document.querySelector('.bl');
+        ddd = 0.1;
+        startText = 'Progress: '
+        eee = ddd * 20;
+        step = ddd;
+        length = mmm.offsetWidth;
+        mmm.innerHTML = 'Click me';
+        elem.innerHTML = startText + 0 + ' %';
+
+        mmm.addEventListener('click', () => {
+            lll1 = 0;
+            mmm.innerHTML = '<div class="mr"> </div>';
+            lll = document.querySelector('.mr');
+            lll.style.color = 'black';
+            mmm.classList.add('bl1');
+                        lllll();
+        });
+
+        function kkk() {
+            if (flip) {
+                lll1 += step;
+                lll.style.width = lll1 * 2 + '%';
+                lll.innerHTML = ("" + lll1).slice(0, 2) + ' %';
+                elem.innerHTML = startText + lll.innerHTML;
+                if (lll1 >= 50) { flip = !flip }
+                lllll();
+            } else if (!flip) {
+                lll1 += step;
+                lll3 = (50 - (lll1 - 50)) * 2
+                lll2 = length - length / 100 * lll3;
+                lll.innerHTML = ("" + lll1).slice(0, 2) + ' %';
+                lll.style.marginLeft = lll2 + 'px';
+                lll.style.width = lll3 + '%';
+                elem.innerHTML = startText + lll.innerHTML;
+                if (lll1 >= 100 || lll2 > mmm.offsetWidth) {
+                    flip = !flip;
+                    lll.style.marginLeft = 0 + 'px';
+                    elem.innerHTML = startText + ("" + lll1).slice(0, 3) + ' %';
+                    mmm.innerHTML = 'Click me';
+                    mmm.classList = 'bl';
+                    return;
+                }
+                lllll()
+            }
+        }
+        function lllll() {
+            setTimeout(kkk, eee);
+        }
+
+        function fib(n, fibarr = [0, 1, 1]) {
+            m++;
+            if (fibarr[n]) {
+                return fibarr[n];
+            };
+            return fibarr[n] = fib(n - 1, fibarr) + fib(n - 2, fibarr);
+        }
+        let m = 0;
+        let n = 100;
+        let z = fib(n) + " - Fibonacci sequence number # " + n + ", operations performed " + m;
+        document.getElementById("demo").innerHTML = "The value is: " + z;
+    </script>
+    <script src="./js/tryfib.js"></script>
+</body>
+
+</html>
